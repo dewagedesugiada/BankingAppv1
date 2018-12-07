@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class Conn {
 
-	static final String DB_URL = "jdbc:mysql://localhost/bankapp";
+	static final String DB_URL = "jdbc:mysql://localhost/banking";
 	Connection connection = null;
 	Statement statement = null ;
 	ResultSet resultSet =null ;
