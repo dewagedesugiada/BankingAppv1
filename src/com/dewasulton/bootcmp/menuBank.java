@@ -3,31 +3,25 @@ package com.dewasulton.bootcmp;
 import java.util.Scanner;
 
 public class menuBank {
-
-	 
-	    MenuAccountNumber menu = new MenuAccountNumber();
-		private Scanner sc;
+	 	 Scanner sc = new Scanner(System.in);
 	    
 	    public void show(){
-	    	sc = new Scanner(System.in);
-	        System.out.println("### Select Menu ###");
-	        System.out.println("1. Account Number");
+	        System.out.println("\n### Menu home ###");
+	        System.out.println("1. Account number");
 	        System.out.println("0. Exit");
+	        System.out.print("Choose \t: ");
+	        String no = sc.next();
 	        
-	        
-	       int ask = sc.nextInt();
-	        
-	        switch(ask){
-	            case 1:
-	                menu.show();
-	                break;
-	            case 0:
-	                System.exit(0);
-	                break;
-	            default:
-	                System.out.println("Not Found!\n");
-	                show();
-	                break;
+	        if(no.equals("1")){
+	            MenuAccountNumber menu = new MenuAccountNumber();
+	            menu.show();
+	        }else if(no.equals("0")){
+	            System.exit(0);
+	        }else{
+	            System.out.println("Not found");
+	            show();
 	        }
 	    }
-}
+	  }
+	    
+
